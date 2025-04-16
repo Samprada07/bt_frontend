@@ -28,7 +28,7 @@ const Navbar = () => {
 				</Link>
 				{name && (
 					<div className="nav-item d-flex align-items-center">
-						<p className="text-white fs-5 fw-bold me-4 my-2">
+						<p className="text-white fs-5 fw-bold my-2">
 							Hello, {name.charAt(0).toUpperCase() + name.slice(1)}
 						</p>
 					</div>

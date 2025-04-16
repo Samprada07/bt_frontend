@@ -12,7 +12,7 @@ function Upload() {
     const [uploadedImage, setUploadedImage] = useState(null);
     const [classificationResult, setClassificationResult] = useState(null);
     const [confidenceScore, setConfidenceScore] = useState(null);
-    const { handleSubmit, isSubmitting, error } = useFormSubmit;
+    const { handleSubmit, isSubmitting, error } = useFormSubmit();
 
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
@@ -50,7 +50,7 @@ function Upload() {
             if (error.response) {
                 // The request was made and the server responded with a status code
                 // that falls out of the range of 200
-                alert(`Error: ${error.response.data.message || error.response.data.error || 'Server error occurred'}`);
+                alert(`${error.response.data.message || error.response.data.error || "This is not a MRI image. Please upload a valid brain MRI scan."}`);
             } else if (error.request) {
                 // The request was made but no response was received
                 alert('No response received from server. Please check if the server is running.');

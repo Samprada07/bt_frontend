@@ -14,6 +14,9 @@ const Home = () => {
   const handleRegister = () => {
     navigate("/register");
   };
+  const handleUpload = () => {
+    navigate("/upload");
+  }
 
   return (
     <div
@@ -37,6 +40,7 @@ const Home = () => {
               <Nav.Link onClick={handleRegister}>Register</Nav.Link>
               <Nav.Link href="#features">Features</Nav.Link>
               <Nav.Link href="#about">About Us</Nav.Link>
+              <Nav.Link onClick={handleUpload}>Upload MRI</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
