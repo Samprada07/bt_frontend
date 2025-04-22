@@ -51,7 +51,7 @@ function ConditionalNavbar() {
 		"/login",
 		"/register",
 		"/forgotpassword",
-		"/resetpassword/:token",
+		"/reset-password/:token",
 	];
 
 	console.log("Current Path:", location.pathname); // Debugging
