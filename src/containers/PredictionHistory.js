@@ -25,7 +25,7 @@ const PredictionHistory = () => {
 				}
 
 				const res = await axios.get(
-					"http://127.0.0.1:8000/users/prediction-history",
+					`${process.env.REACT_APP_API_BASE_URL}/users/prediction-history`,
 					{ headers: { Authorization: `Bearer ${token}` } }
 				);
 
@@ -85,7 +85,7 @@ const PredictionHistory = () => {
 										<td>{indexOfFirstItem + index + 1}</td>
 										<td>
 											<img
-												src={`http://127.0.0.1:8000/${entry.file_path}`}
+												src={`${process.env.REACT_APP_API_BASE_URL}/${entry.file_path}`}
 												alt="MRI"
 												style={{ width: "80px", height: "80px", borderRadius: "8px" }}
 											/>

@@ -33,7 +33,7 @@ function Upload() {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await axios.post('http://127.0.0.1:8000/mri/upload', formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/mri/upload`, formData, {
                 headers: { 
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`

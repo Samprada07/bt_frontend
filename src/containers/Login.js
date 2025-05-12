@@ -17,7 +17,7 @@ const Login = () => {
 	const { handleSubmit, isSubmitting, error } = useFormSubmit(); // Destructure the hook
 
 	const handleLogin = async () => {
-		const res = await axios.post("http://127.0.0.1:8000/auth/login", {
+		const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, {
 			email: formData.email,
 			password: formData.password,
 		});

@@ -58,7 +58,7 @@ const AdminAnalytics = () => {
     useEffect(() => {
         const fetchAnalyticsData = async () => {
             try {
-                const { data } = await axios.get("http://127.0.0.1:8000/classification/analytics");
+                const { data } = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/classification/analytics`);
                 console.log("Fetched Analytics Data:", data);
     
                 // Set statistics data

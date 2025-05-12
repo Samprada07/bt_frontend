@@ -26,7 +26,7 @@ const Register = () => {
 	  
 		try {
 		  // Send the registration request
-		  await axios.post("http://127.0.0.1:8000/users/register", {
+		  await axios.post(`${process.env.REACT_APP_API_BASE_URL}/users/register`, {
 			username: formData.username,
 			email: formData.email,
 			password: formData.password,
